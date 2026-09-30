@@ -92,3 +92,7 @@ body.lightbox-open{overflow:hidden;}
 }
 .app-lightbox-close:hover{background:#1a2635;}
 @media(max-width:700px){.app-lightbox{padding:16px}.app-lightbox-close{top:10px;right:10px}}
+
+/* QuickSign's Windows title bar is shorter; preserve the top of its logo */
+.zoomable-app-shot[data-title="QuickSign"]{clip-path:inset(1.9% 0 0 0) !important;margin-top:-1.9% !important;}
+.app-lightbox-frame img{clip-path:inset(var(--lightbox-crop,2.75%) 0 0 0) !important;margin-top:calc(-1 * var(--lightbox-crop,2.75%)) !important;}
