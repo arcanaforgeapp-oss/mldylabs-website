@@ -238,3 +238,14 @@ body.lightbox-open{overflow:hidden;}
  object-position:left center;
  margin:8px 0 14px;
 }
+
+/* Correct target: replace the featured Arcana Forge H3 title */
+.arcana-copy .arcana-title-logo{
+ display:block !important;
+ width:min(470px,100%) !important;
+ height:auto !important;
+ max-height:125px !important;
+ object-fit:contain !important;
+ object-position:left center !important;
+ margin:12px 0 14px !important;
+}
