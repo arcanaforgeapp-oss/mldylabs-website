@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://mldylabs.com/sitemap.xml
+Sitemap: https://www.mldylabs.com/sitemap.xml
