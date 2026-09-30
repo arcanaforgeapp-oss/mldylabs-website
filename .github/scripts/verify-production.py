@@ -68,7 +68,6 @@ def main():
         raise SystemExit("No static site files found to verify.")
     deadline = time.monotonic() + int(os.environ.get("VERIFY_TIMEOUT_SECONDS", "900"))
     while True:
-        check_vercel_status()
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
             failures = [result for result in pool.map(verify_file, files) if result]
         if not failures:
@@ -80,6 +79,7 @@ def main():
             return
         print("Waiting for production: " + "; ".join(failures), flush=True)
         if time.monotonic() >= deadline:
+            check_vercel_status()
             raise SystemExit("Production verification timed out. Check the Vercel hook branch, build logs, and production domain assignment.")
         time.sleep(15)
 
