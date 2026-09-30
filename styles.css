@@ -99,3 +99,6 @@ body.lightbox-open{overflow:hidden;}
 
 /* Fine tune QuickSign: remove final Windows strip without touching logo */
 .zoomable-app-shot[data-title="QuickSign"]{clip-path:inset(2.35% 0 0 0) !important;margin-top:-2.35% !important;}
+
+/* Final pixel-level QuickSign title-bar trim */
+.zoomable-app-shot[data-title="QuickSign"]{clip-path:inset(2.55% 0 0 0) !important;margin-top:-2.55% !important;}
