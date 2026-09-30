@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: vercel-production
+  group: vercel-production-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
