@@ -175,3 +175,9 @@ body.lightbox-open{overflow:hidden;}
  .workstation{transform:scale(.68) !important;transform-origin:center center !important;}
  .hero .actions{margin-top:12px !important;}
 }
+
+/* Vertically center compact hero contents */
+@media (min-width:901px){
+ .hero-grid > div:first-child{transform:translateY(-40px) scale(.78) !important;transform-origin:left center !important;}
+ .workstation{transform:translateY(-40px) scale(.68) !important;transform-origin:center center !important;}
+}
