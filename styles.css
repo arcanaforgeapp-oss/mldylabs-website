@@ -337,3 +337,22 @@ body.lightbox-open{overflow:hidden;}
  color:#8c9caf !important;
 }
 .throwaway-title p b{color:#35b8ff !important;font-weight:700 !important;}
+
+/* Clean minimal footer */
+footer{padding:22px 0 !important;}
+.footer{
+ display:flex !important;
+ align-items:center !important;
+ justify-content:space-between !important;
+ gap:24px !important;
+}
+.footer .brand{margin:0 !important;}
+.footer small{
+ margin:0 !important;
+ color:#657487 !important;
+ text-align:right !important;
+}
+@media(max-width:650px){
+ .footer{flex-direction:column !important;justify-content:center !important;text-align:center !important;}
+ .footer small{text-align:center !important;}
+}
