@@ -9,7 +9,7 @@ export default async function handler(req,res){
     if(name.length>100||email.length>254||subject.length>160||message.length>5000) return res.status(400).json({error:'One or more fields are too long.'});
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return res.status(400).json({error:'Please enter a valid email address.'});
     const r=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${process.env.RESEND_API_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({
-      from:'MLDY Labs Website <onboarding@resend.dev>',
+      from:'MLDY Labs <contact@mldylabs.com>',
       to:['arcanaforgeapp@gmail.com'],
       reply_to:email.trim(),
       subject:`[MLDY Labs] ${topic}: ${subject.trim()}`,
