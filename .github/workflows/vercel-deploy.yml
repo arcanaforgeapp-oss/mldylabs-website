@@ -1,0 +1,16 @@
+name: Trigger Vercel Production Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deploy hook
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          curl --fail --show-error --silent --request POST "$VERCEL_DEPLOY_HOOK"
