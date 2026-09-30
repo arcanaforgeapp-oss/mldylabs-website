@@ -356,3 +356,20 @@ footer{padding:22px 0 !important;}
  .footer{flex-direction:column !important;justify-content:center !important;text-align:center !important;}
  .footer small{text-align:center !important;}
 }
+
+/* Interior MLDY Labs pages */
+.inner-page{min-height:calc(100vh - 150px);padding:58px 0 72px;background:radial-gradient(circle at 75% 5%,rgba(29,128,208,.10),transparent 30%),#020811}
+.page-hero{padding:44px 0 42px;border-bottom:1px solid #172538}
+.page-hero h1{font-size:clamp(42px,5vw,68px);line-height:1;margin:10px 0 18px;letter-spacing:-2px}
+.page-hero p{max-width:760px;color:#91a0b4;font-size:17px;line-height:1.75;margin:0}
+.page-grid,.about-split{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-top:34px;padding-bottom:42px}
+.info-card,.contact-form{border:1px solid #20334a;border-radius:12px;background:linear-gradient(180deg,#0b1625,#07101b);padding:26px}
+.info-card h2{font-size:22px;margin:0 0 12px}.info-card p{color:#91a0b4;line-height:1.7}.info-card a{color:#3fc0ff;font-weight:800;text-decoration:none}
+.feature-card span{color:#38baff;font-weight:900;font-size:12px;letter-spacing:2px}
+.contact-band{display:flex;align-items:center;justify-content:space-between;gap:30px;border:1px solid #20334a;border-radius:14px;padding:28px 32px;background:#081321}
+.contact-band h2{font-size:30px;margin:7px 0}.contact-band p{color:#91a0b4;margin:0}
+.contact-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px;padding-top:34px}
+.contact-form{display:grid;gap:16px}.contact-form label{font-size:12px;font-weight:800;letter-spacing:.08em;color:#b8c6d8}
+.contact-form input,.contact-form textarea{box-sizing:border-box;width:100%;margin-top:7px;background:#040b13;border:1px solid #263b53;border-radius:7px;padding:13px;color:#fff;font:inherit;outline:none}
+.contact-form input:focus,.contact-form textarea:focus{border-color:#35b8ff}.contact-form textarea{resize:vertical}.contact-form .button{border:0;cursor:pointer;justify-self:start}.contact-form small{color:#66778c}
+@media(max-width:800px){.page-grid,.about-split,.contact-layout{grid-template-columns:1fr}.contact-band{align-items:flex-start;flex-direction:column}.inner-page{padding-top:30px}}
