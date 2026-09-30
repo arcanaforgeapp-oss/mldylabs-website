@@ -133,3 +133,13 @@ body.lightbox-open{overflow:hidden;}
  object-fit:contain !important;
  border-radius:12px !important;
 }
+
+/* Disabled upcoming products */
+.coming-soon-card{position:relative;overflow:hidden;filter:grayscale(1);opacity:.58;pointer-events:none;user-select:none;}
+.coming-soon-card .coming-soon-ribbon{
+ position:absolute;z-index:20;top:46%;left:-18%;width:136%;padding:12px 0;
+ transform:rotate(-11deg);background:#ffd400;color:#151000;text-align:center;
+ font-size:17px;font-weight:1000;letter-spacing:.18em;text-shadow:none;
+ box-shadow:0 4px 22px rgba(0,0,0,.55),0 0 24px rgba(255,212,0,.22);
+}
+.development-label{display:inline-block;margin-top:auto;font-weight:800;color:#b5bcc6;}
