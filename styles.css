@@ -123,3 +123,13 @@ body.lightbox-open{overflow:hidden;}
  background:transparent !important;box-shadow:none !important;overflow:hidden !important;border-radius:15px !important;
 }
 .glossy-product-icon img{display:block;width:100%;height:100%;object-fit:cover;border-radius:15px;}
+
+/* Give glossy icon artwork breathing room so no generated asset edges are clipped */
+.glossy-product-icon{overflow:visible !important;}
+.glossy-product-icon img{
+ width:94% !important;
+ height:94% !important;
+ margin:3% !important;
+ object-fit:contain !important;
+ border-radius:12px !important;
+}
