@@ -161,3 +161,9 @@ body.lightbox-open{overflow:hidden;}
   .hero p{line-height:1.5 !important;margin:0 0 14px !important;}
   .workstation{transform:scale(.84);transform-origin:center;}
 }
+
+/* Hero height correction: end the entire hero at the compact green-line target */
+@media (min-width: 901px){
+  .hero{height:320px !important;min-height:0 !important;overflow:hidden !important;}
+  .hero-grid{height:320px !important;min-height:0 !important;padding:0 !important;align-items:center !important;}
+}
