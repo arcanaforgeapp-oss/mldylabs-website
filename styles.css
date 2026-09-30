@@ -288,3 +288,23 @@ body.lightbox-open{overflow:hidden;}
 .throwaway-title img{
  margin:0 auto !important;
 }
+
+/* Collapse Throw Away Programs header to the artwork itself */
+.throwaway-title{
+ display:flex !important;
+ align-items:center !important;
+ justify-content:center !important;
+ min-height:0 !important;
+ height:auto !important;
+ padding:6px 0 !important;
+ margin:0 auto 6px !important;
+ line-height:0 !important;
+}
+.throwaway-title img{
+ display:block !important;
+ width:min(304px,37vw) !important;
+ height:auto !important;
+ max-height:none !important;
+ margin:0 auto !important;
+}
+.products{padding-top:18px !important;}
