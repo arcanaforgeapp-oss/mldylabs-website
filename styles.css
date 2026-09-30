@@ -258,3 +258,14 @@ body.lightbox-open{overflow:hidden;}
 .utility-grid{gap:10px !important;}
 .utility-grid>div{min-height:76px !important;padding:12px !important;}
 .support{margin-top:20px !important;}
+
+/* Branded Throw Away Programs section header */
+.throwaway-title{padding:0 !important;margin:0 auto 28px !important;}
+.throwaway-title img{
+ display:block;
+ width:min(760px,92vw);
+ height:auto;
+ max-height:230px;
+ object-fit:contain;
+ margin:0 auto;
+}
