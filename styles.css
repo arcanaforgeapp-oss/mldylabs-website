@@ -405,3 +405,15 @@ footer{padding:22px 0 !important;}
 .legal-doc a{color:#35b8ff;font-weight:700}
 .legal-note{margin-top:28px!important;padding:18px 20px;border:1px solid #20334a;border-radius:10px;background:#081321;color:#8fa0b4!important}
 @media(max-width:650px){.footer-meta{margin-left:0;flex-direction:column;gap:10px}.footer-links{justify-content:center}}
+
+/* Launch polish */
+.not-found{min-height:68vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-top:70px;padding-bottom:90px}
+.not-found h1{font-size:clamp(42px,6vw,76px);max-width:850px;line-height:1.02;letter-spacing:-2px;margin:12px 0 18px}
+.not-found p{max-width:650px;color:#91a0b4;font-size:18px;line-height:1.7}
+.not-found .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.download-trust{margin:0 0 70px;border:1px solid #20334a;border-radius:12px;background:linear-gradient(180deg,#0b1625,#07101b);padding:24px}
+.download-trust h3{margin:0 0 8px;font-size:20px}
+.download-trust p{margin:0;color:#91a0b4;line-height:1.7}
+.download-trust strong{color:#eef4fb}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,[role="button"]:focus-visible{outline:2px solid #35b8ff;outline-offset:3px}
+@media(max-width:760px){.nav{flex-wrap:wrap}.nav nav{order:3;width:100%;display:flex;gap:16px;overflow-x:auto;padding:10px 0}.navcta{margin-left:auto}.hero-grid,.arcana{grid-template-columns:1fr!important}.hero{min-height:auto!important}.hero-copy{padding-top:30px}.arcana{gap:28px}.cards{grid-template-columns:1fr!important}.support{flex-direction:column;align-items:flex-start!important}.not-found{min-height:60vh}}
