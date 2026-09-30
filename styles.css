@@ -143,3 +143,12 @@ body.lightbox-open{overflow:hidden;}
  box-shadow:0 4px 22px rgba(0,0,0,.55),0 0 24px rgba(255,212,0,.22);
 }
 .development-label{display:inline-block;margin-top:auto;font-weight:800;color:#b5bcc6;}
+
+/* Keep upcoming cards muted, but make the status banner vivid */
+.coming-soon-card{filter:none !important;opacity:1 !important;}
+.coming-soon-card > *:not(.coming-soon-ribbon){filter:grayscale(1) !important;opacity:.48 !important;}
+.coming-soon-card .coming-soon-ribbon{
+ filter:none !important;opacity:1 !important;
+ background:#ffd400 !important;color:#111 !important;
+ box-shadow:0 5px 24px rgba(0,0,0,.65),0 0 28px rgba(255,212,0,.45) !important;
+}
