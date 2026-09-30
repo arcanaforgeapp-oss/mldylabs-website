@@ -249,3 +249,12 @@ body.lightbox-open{overflow:hidden;}
  object-position:left center !important;
  margin:12px 0 14px !important;
 }
+
+/* Streamlined lower homepage */
+.free{padding:42px 0 !important;}
+.free-grid{grid-template-columns:1.1fr 1fr !important;gap:46px !important;align-items:center !important;}
+.free h2{font-size:38px !important;margin:8px 0 10px !important;}
+.free p{margin:0 0 16px !important;max-width:620px !important;}
+.utility-grid{gap:10px !important;}
+.utility-grid>div{min-height:76px !important;padding:12px !important;}
+.support{margin-top:20px !important;}
