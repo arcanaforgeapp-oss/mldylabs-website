@@ -2,6 +2,7 @@
 
 import concurrent.futures
 import hashlib
+import json
 import os
 from pathlib import Path
 import subprocess
@@ -38,6 +39,25 @@ def verify_file(item):
     return None
 
 
+def check_vercel_status():
+    repository = os.environ.get("GITHUB_REPOSITORY")
+    sha = os.environ.get("GITHUB_SHA")
+    if not repository or not sha:
+        return
+    url = f"https://api.github.com/repos/{repository}/commits/{sha}/status"
+    request = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json", "User-Agent": "MLDY-production-verifier"})
+    try:
+        with urllib.request.urlopen(request, timeout=15) as response:
+            statuses = json.load(response).get("statuses", [])
+    except (urllib.error.URLError, TimeoutError, OSError) as error:
+        print(f"Could not read Vercel commit status: {error}", flush=True)
+        return
+    # The endpoint returns the newest status for each context first.
+    status = next((item for item in statuses if item.get("context") == "Vercel"), None)
+    if status and status.get("state") in {"failure", "error"}:
+        raise SystemExit("Vercel rejected deployment: " + status.get("description", "Check the Vercel dashboard."))
+
+
 def main():
     paths = subprocess.check_output(["git", "ls-files", "-z"]).decode().split("\0")
     extensions = {".html", ".css", ".png", ".webp", ".ico", ".xml", ".txt"}
@@ -48,6 +68,7 @@ def main():
         raise SystemExit("No static site files found to verify.")
     deadline = time.monotonic() + int(os.environ.get("VERIFY_TIMEOUT_SECONDS", "900"))
     while True:
+        check_vercel_status()
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
             failures = [result for result in pool.map(verify_file, files) if result]
         if not failures:
