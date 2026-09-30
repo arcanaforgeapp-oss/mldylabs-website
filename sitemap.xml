@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://mldylabs.com/</loc><priority>1.0</priority></url>
-<url><loc>https://mldylabs.com/quicksign</loc><priority>0.9</priority></url>
-<url><loc>https://mldylabs.com/convert</loc><priority>0.9</priority></url>
-<url><loc>https://mldylabs.com/teleprompter</loc><priority>0.9</priority></url>
-<url><loc>https://mldylabs.com/support</loc><priority>0.7</priority></url>
-<url><loc>https://mldylabs.com/support-quicksign</loc><priority>0.6</priority></url>
-<url><loc>https://mldylabs.com/support-convert</loc><priority>0.6</priority></url>
-<url><loc>https://mldylabs.com/support-teleprompter</loc><priority>0.6</priority></url>
-<url><loc>https://mldylabs.com/about</loc><priority>0.6</priority></url>
-<url><loc>https://mldylabs.com/contact</loc><priority>0.6</priority></url>
-<url><loc>https://mldylabs.com/privacy</loc><priority>0.3</priority></url>
-<url><loc>https://mldylabs.com/terms</loc><priority>0.3</priority></url>
+<url><loc>https://www.mldylabs.com/</loc><priority>1.0</priority></url>
+<url><loc>https://www.mldylabs.com/quicksign</loc><priority>0.9</priority></url>
+<url><loc>https://www.mldylabs.com/convert</loc><priority>0.9</priority></url>
+<url><loc>https://www.mldylabs.com/teleprompter</loc><priority>0.9</priority></url>
+<url><loc>https://www.mldylabs.com/support</loc><priority>0.7</priority></url>
+<url><loc>https://www.mldylabs.com/support-quicksign</loc><priority>0.6</priority></url>
+<url><loc>https://www.mldylabs.com/support-convert</loc><priority>0.6</priority></url>
+<url><loc>https://www.mldylabs.com/support-teleprompter</loc><priority>0.6</priority></url>
+<url><loc>https://www.mldylabs.com/about</loc><priority>0.6</priority></url>
+<url><loc>https://www.mldylabs.com/contact</loc><priority>0.6</priority></url>
+<url><loc>https://www.mldylabs.com/privacy</loc><priority>0.3</priority></url>
+<url><loc>https://www.mldylabs.com/terms</loc><priority>0.3</priority></url>
 </urlset>
