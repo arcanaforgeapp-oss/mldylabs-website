@@ -308,3 +308,32 @@ body.lightbox-open{overflow:hidden;}
  margin:0 auto !important;
 }
 .products{padding-top:18px !important;}
+
+/* Final compact Throw Away Programs heading */
+.products{
+ padding-top:8px !important;
+ margin-top:0 !important;
+}
+.throwaway-title{
+ display:block !important;
+ min-height:0 !important;
+ height:auto !important;
+ padding:0 !important;
+ margin:0 auto 14px !important;
+ line-height:normal !important;
+ text-align:center !important;
+}
+.throwaway-title h2{
+ margin:0 !important;
+ font-size:32px !important;
+ line-height:1.05 !important;
+ font-weight:800 !important;
+ letter-spacing:-.6px !important;
+}
+.throwaway-title h2 span{color:#35b8ff !important;}
+.throwaway-title p{
+ margin:6px 0 0 !important;
+ font-size:14px !important;
+ color:#8c9caf !important;
+}
+.throwaway-title p b{color:#35b8ff !important;font-weight:700 !important;}
