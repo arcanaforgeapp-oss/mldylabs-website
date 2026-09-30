@@ -373,3 +373,13 @@ footer{padding:22px 0 !important;}
 .contact-form input,.contact-form textarea{box-sizing:border-box;width:100%;margin-top:7px;background:#040b13;border:1px solid #263b53;border-radius:7px;padding:13px;color:#fff;font:inherit;outline:none}
 .contact-form input:focus,.contact-form textarea:focus{border-color:#35b8ff}.contact-form textarea{resize:vertical}.contact-form .button{border:0;cursor:pointer;justify-self:start}.contact-form small{color:#66778c}
 @media(max-width:800px){.page-grid,.about-split,.contact-layout{grid-template-columns:1fr}.contact-band{align-items:flex-start;flex-direction:column}.inner-page{padding-top:30px}}
+
+/* Dedicated product support guides */
+.support-docs{display:grid;gap:14px;padding-top:34px;padding-bottom:42px}
+.help-section{display:grid;grid-template-columns:64px 1fr;gap:20px;border:1px solid #20334a;border-radius:12px;background:linear-gradient(180deg,#0b1625,#07101b);padding:25px 28px}
+.help-number{font-size:13px;letter-spacing:2px;color:#38baff;font-weight:900;padding-top:6px}
+.help-section h2{margin:0 0 10px;font-size:24px}
+.help-section p,.help-section li{color:#91a0b4;line-height:1.7}
+.help-section ul,.help-section ol{margin:8px 0 0;padding-left:21px}
+.help-section .button{display:inline-flex;margin-top:8px}
+@media(max-width:600px){.help-section{grid-template-columns:1fr;gap:4px}}
