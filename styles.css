@@ -383,3 +383,12 @@ footer{padding:22px 0 !important;}
 .help-section ul,.help-section ol{margin:8px 0 0;padding-left:21px}
 .help-section .button{display:inline-flex;margin-top:8px}
 @media(max-width:600px){.help-section{grid-template-columns:1fr;gap:4px}}
+
+/* Site-wide polish */
+.nav nav a.active{color:#fff;position:relative}.nav nav a.active:after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:2px;background:#35b8ff;border-radius:2px;box-shadow:0 0 10px #35b8ff}
+.support-actions{display:flex;gap:10px;align-items:center}
+.contact-form select{box-sizing:border-box;width:100%;margin-top:7px;background:#040b13;border:1px solid #263b53;border-radius:7px;padding:13px;color:#fff;font:inherit;outline:none}
+.contact-form select:focus{border-color:#35b8ff}
+.pp-support-link{padding:0 0 70px}
+.product-page>header{width:100%}
+@media(max-width:620px){.support-actions{margin-top:20px;flex-wrap:wrap}}
