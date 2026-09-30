@@ -152,3 +152,12 @@ body.lightbox-open{overflow:hidden;}
  background:#ffd400 !important;color:#111 !important;
  box-shadow:0 5px 24px rgba(0,0,0,.65),0 0 28px rgba(255,212,0,.45) !important;
 }
+
+/* Compact homepage hero: roughly half the previous vertical footprint */
+@media (min-width: 901px){
+  .hero-grid{min-height:310px !important;padding:28px 0 !important;}
+  .hero h1{font-size:64px !important;margin:8px 0 12px !important;}
+  .hero h2{font-size:25px !important;margin-bottom:10px !important;}
+  .hero p{line-height:1.5 !important;margin:0 0 14px !important;}
+  .workstation{transform:scale(.84);transform-origin:center;}
+}
