@@ -116,3 +116,10 @@ body.lightbox-open{overflow:hidden;}
 .product-icon-3{color:#ff4d67 !important;border:1px solid #ff4d67 !important;}
 .product-icon-4{color:#ad72ff !important;border:1px solid #ad72ff !important;}
 .product-icon-5{color:#32d8e8 !important;border:1px solid #32d8e8 !important;}
+
+/* Actual glossy icons extracted from approved generated design */
+.glossy-product-icon{
+ width:64px !important;height:64px !important;padding:0 !important;border:0 !important;
+ background:transparent !important;box-shadow:none !important;overflow:hidden !important;border-radius:15px !important;
+}
+.glossy-product-icon img{display:block;width:100%;height:100%;object-fit:cover;border-radius:15px;}
