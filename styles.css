@@ -392,3 +392,16 @@ footer{padding:22px 0 !important;}
 .pp-support-link{padding:0 0 70px}
 .product-page>header{width:100%}
 @media(max-width:620px){.support-actions{margin-top:20px;flex-wrap:wrap}}
+
+/* Legal pages and footer policy links */
+.footer-meta{display:flex;align-items:center;gap:18px;margin-left:auto}
+.footer-links{display:flex;gap:14px}
+.footer-links a{color:#7f90a5;text-decoration:none;transition:.2s}
+.footer-links a:hover{color:#fff}
+.legal-doc{max-width:920px;padding-top:36px;padding-bottom:72px}
+.legal-doc article{padding:22px 0;border-bottom:1px solid #172538}
+.legal-doc h2{margin:0 0 10px;font-size:22px}
+.legal-doc p{margin:0;color:#91a0b4;line-height:1.8}
+.legal-doc a{color:#35b8ff;font-weight:700}
+.legal-note{margin-top:28px!important;padding:18px 20px;border:1px solid #20334a;border-radius:10px;background:#081321;color:#8fa0b4!important}
+@media(max-width:650px){.footer-meta{margin-left:0;flex-direction:column;gap:10px}.footer-links{justify-content:center}}
