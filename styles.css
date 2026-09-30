@@ -52,3 +52,6 @@
   margin-top:calc(-1 * var(--titlebar-crop));
   transform:translateY(-1px);
 }
+
+/* Arcana Forge has a slightly taller Windows chrome strip */
+.arcana-art.real-shot{--titlebar-crop:3.25%;}
