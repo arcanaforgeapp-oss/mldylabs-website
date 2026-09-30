@@ -208,3 +208,22 @@ body.lightbox-open{overflow:hidden;}
   object-fit:contain;
   object-position:center;
 }
+
+/* Hero artwork correction: preserve the complete generated image and its natural ratio */
+@media (min-width:901px){
+  .hero-workstation-image{
+    height:270px !important;
+    width:100% !important;
+    overflow:visible !important;
+    transform:translateY(-40px) !important;
+  }
+  .hero-workstation-image img{
+    width:auto !important;
+    height:auto !important;
+    max-width:100% !important;
+    max-height:270px !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+    border-radius:0 !important;
+  }
+}
