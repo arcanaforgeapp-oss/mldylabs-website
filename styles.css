@@ -276,3 +276,15 @@ body.lightbox-open{overflow:hidden;}
  width:min(304px,37vw) !important;
  max-height:92px !important;
 }
+
+/* Center compact Throw Away Programs artwork within its header area */
+.throwaway-title{
+ display:flex !important;
+ align-items:center !important;
+ justify-content:center !important;
+ min-height:150px !important;
+ margin:0 auto 12px !important;
+}
+.throwaway-title img{
+ margin:0 auto !important;
+}
