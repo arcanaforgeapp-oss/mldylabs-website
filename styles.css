@@ -227,3 +227,14 @@ body.lightbox-open{overflow:hidden;}
     border-radius:0 !important;
   }
 }
+
+/* Arcana Forge branded header replaces text title */
+.arcana-title-logo{
+ display:block;
+ width:min(430px,100%);
+ height:auto;
+ max-height:118px;
+ object-fit:contain;
+ object-position:left center;
+ margin:8px 0 14px;
+}
