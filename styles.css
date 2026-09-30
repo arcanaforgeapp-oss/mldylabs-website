@@ -167,3 +167,11 @@ body.lightbox-open{overflow:hidden;}
   .hero{height:320px !important;min-height:0 !important;overflow:hidden !important;}
   .hero-grid{height:320px !important;min-height:0 !important;padding:0 !important;align-items:center !important;}
 }
+
+/* Fit all hero content cleanly inside compact 320px section */
+@media (min-width:901px){
+ .hero-grid{grid-template-columns:1fr 1.04fr !important;gap:42px !important;}
+ .hero-grid > div:first-child{transform:scale(.78);transform-origin:left center;}
+ .workstation{transform:scale(.68) !important;transform-origin:center center !important;}
+ .hero .actions{margin-top:12px !important;}
+}
