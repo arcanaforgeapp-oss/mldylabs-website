@@ -43,3 +43,12 @@
   .arcana-art.real-shot img,
   .mock.real-product-shot img{height:auto !important;max-height:none !important;}
 }
+
+/* Hide Windows title bars while preserving the complete application UI */
+.real-shot,.real-product-shot{--titlebar-crop:2.75%;}
+.real-shot,.mock.real-product-shot{overflow:hidden !important;}
+.real-shot img,.mock.real-product-shot img{
+  clip-path:inset(var(--titlebar-crop) 0 0 0);
+  margin-top:calc(-1 * var(--titlebar-crop));
+  transform:translateY(-1px);
+}
