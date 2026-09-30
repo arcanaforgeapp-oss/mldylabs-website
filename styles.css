@@ -269,3 +269,10 @@ body.lightbox-open{overflow:hidden;}
  object-fit:contain;
  margin:0 auto;
 }
+
+/* Compact Throw Away Programs artwork to expose product cards sooner */
+.throwaway-title{margin-bottom:12px !important;}
+.throwaway-title img{
+ width:min(304px,37vw) !important;
+ max-height:92px !important;
+}
