@@ -4,13 +4,39 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vercel-production
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
       - name: Trigger Vercel deploy hook
         env:
           VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
         run: |
-          curl --fail --show-error --silent --request POST "$VERCEL_DEPLOY_HOOK"
+          if [ -z "$VERCEL_DEPLOY_HOOK" ]; then
+            echo "::error::Configure the VERCEL_DEPLOY_HOOK repository secret for this project's main branch."
+            exit 1
+          fi
+          curl --fail --show-error --silent --connect-timeout 10 --max-time 60 \
+            --request POST "$VERCEL_DEPLOY_HOOK" --output "$RUNNER_TEMP/vercel-hook.json"
+          jq -e '.job.id and (.job.state == "PENDING" or .job.state == "QUEUED" or .job.state == "RUNNING")' \
+            "$RUNNER_TEMP/vercel-hook.json" > /dev/null
+          echo "Vercel accepted deployment job $(jq -r '.job.id' "$RUNNER_TEMP/vercel-hook.json"). Waiting for production verification."
+
+      - name: Verify production serves this repository's static files
+        env:
+          PRODUCTION_URL: https://mldylabs.com
+        run: python3 .github/scripts/verify-production.py
