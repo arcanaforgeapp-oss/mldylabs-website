@@ -417,3 +417,9 @@ footer{padding:22px 0 !important;}
 .download-trust strong{color:#eef4fb}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,[role="button"]:focus-visible{outline:2px solid #35b8ff;outline-offset:3px}
 @media(max-width:760px){.nav{flex-wrap:wrap}.nav nav{order:3;width:100%;display:flex;gap:16px;overflow-x:auto;padding:10px 0}.navcta{margin-left:auto}.hero-grid,.arcana{grid-template-columns:1fr!important}.hero{min-height:auto!important}.hero-copy{padding-top:30px}.arcana{gap:28px}.cards{grid-template-columns:1fr!important}.support{flex-direction:column;align-items:flex-start!important}.not-found{min-height:60vh}}
+
+/* Keep navigation available at tablet widths. */
+@media(min-width:761px) and (max-width:980px){.nav{flex-wrap:wrap}.nav nav{order:3;width:100%;display:flex;gap:16px;overflow-x:auto;padding:10px 0}.navcta{margin-left:auto}}
+/* Installer checksums must wrap within narrow screens. */
+.download-trust code{overflow-wrap:anywhere}
+@media(max-width:980px){.nav{height:auto;min-height:78px;padding-top:12px;padding-bottom:12px;row-gap:8px}}

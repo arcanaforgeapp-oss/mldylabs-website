@@ -1,13 +1,17 @@
 const ALLOWED_TOPICS = new Set(['General Inquiry','QuickSign','Convert','Teleprompter','Arcana Forge','Other']);
 const esc = (s='') => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export default async function handler(req,res){
-  if(req.method!=='POST') return res.status(405).json({error:'Method not allowed.'});
+  res.setHeader('Cache-Control','no-store');
+  if(req.method!=='POST'){ res.setHeader('Allow','POST'); return res.status(405).json({error:'Method not allowed.'}); }
   try{
-    const {name='',email='',topic='',subject='',message='',website=''}=req.body||{};
+    const body=req.body;
+    if(!body || typeof body!=='object' || Array.isArray(body)) return res.status(400).json({error:'Please complete all required fields.'});
+    const {name='',email='',topic='',subject='',message='',website=''}=body;
+    if([name,email,topic,subject,message,website].some(value=>typeof value!=='string')) return res.status(400).json({error:'Please complete all required fields.'});
     if(website) return res.status(200).json({ok:true});
     if(!name.trim()||!email.trim()||!subject.trim()||!message.trim()||!ALLOWED_TOPICS.has(topic)) return res.status(400).json({error:'Please complete all required fields.'});
     if(name.length>100||email.length>254||subject.length>160||message.length>5000) return res.status(400).json({error:'One or more fields are too long.'});
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return res.status(400).json({error:'Please enter a valid email address.'});
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return res.status(400).json({error:'Please enter a valid email address.'});
     const r=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${process.env.RESEND_API_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({
       from:'MLDY Labs <contact@mldylabs.com>',
       to:['arcanaforgeapp@gmail.com'],
