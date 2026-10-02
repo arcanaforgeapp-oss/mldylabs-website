@@ -31,6 +31,19 @@
           "value": "attachment; filename=\"QuickSign-Setup.exe\""
         }
       ]
+    },
+    {
+      "source": "/downloads/image/MLDY-Image-v1.1.1-Windows.zip",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/zip"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=\"MLDY-Image-v1.1.1-Windows.zip\""
+        }
+      ]
     }
   ]
 }
