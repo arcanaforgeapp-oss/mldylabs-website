@@ -44,6 +44,19 @@
           "value": "attachment; filename=\"MLDY-Image-v1.1.1-Windows.zip\""
         }
       ]
+    },
+    {
+      "source": "/downloads/image/MLDY-Image-Setup-v1.1.1.exe",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/octet-stream"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=\"MLDY-Image-Setup-v1.1.1.exe\""
+        }
+      ]
     }
   ]
 }
