@@ -54,7 +54,7 @@
     if(el.matches('#app-nav button,[data-screen],#zoom-button,#reading-variant')){send('event','preview_interaction');return;}
     if(el.tagName!=='A')return;
     const url=new URL(el.href,location.href);
-    if(/\.(exe|zip)$/i.test(url.pathname)){const p=page();const product=['quicksign','convert','teleprompter','image'].find(s=>p.includes(s)||url.pathname.toLowerCase().includes(s));send('event',product?'download_'+product:'download_other');}
+    if(/\.(exe|zip)$/i.test(url.pathname)||/^\/download-(quicksign|convert|teleprompter|image)(\.html)?$/.test(url.pathname)){const p=page();const product=['quicksign','convert','teleprompter','image'].find(s=>p.includes(s)||url.pathname.toLowerCase().includes(s));send('event',product?'download_'+product:'download_other');}
     else if(url.protocol==='mailto:')send('event','support_click');
     else if(url.hostname==='mldyaf.com'||url.hostname==='www.mldyaf.com')send('event','visit_arcana');
     else if(url.hostname==='mldylabs.com'||url.hostname==='www.mldylabs.com'){if(location.hostname.includes('mldyaf'))send('event','visit_labs');}
