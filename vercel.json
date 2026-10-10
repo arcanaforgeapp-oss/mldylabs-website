@@ -58,10 +58,5 @@
         }
       ]
     }
-  ],
-  "functions": {
-    "api/visitors.mjs": {
-      "maxDuration": 30
-    }
-  }
+  ]
 }
