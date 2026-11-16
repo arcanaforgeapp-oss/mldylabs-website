@@ -443,3 +443,25 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .hero-categories{display:flex;gap:0;margin-top:25px;color:#7f9ab1;font-size:9px;letter-spacing:2px;font-weight:800}.hero-categories span+span{border-left:1px solid #2a4257;margin-left:18px;padding-left:18px}
 /* Supplied Front Desk brand artwork */
 .frontdesk-ad img.fd-brand-logo{width:250px;max-width:85%;height:auto;border:0;border-radius:0;box-shadow:none}.fd-intro .fd-brand-logo{display:block;width:380px;max-width:100%;height:auto;margin-top:14px}.fd-logo-intro{display:block;font-size:24px!important;color:#afc3d6!important;letter-spacing:0}.hero .frontdesk-ad .fd-logo-heading{margin:22px 0 18px!important}.fd-intro .fd-logo-heading{margin-bottom:28px}@media(max-width:480px){.frontdesk-ad img.fd-brand-logo{width:210px}.fd-intro .fd-brand-logo{width:300px}}
+
+/* Homepage: featured app, free downloads and upcoming projects */
+.mldy-home #arcana{margin-block:36px 46px}
+.mldy-home #arcana h1{margin:0}
+.mldy-home #arcana h2{margin:0;font-size:clamp(24px,3vw,36px);line-height:1.12;letter-spacing:-.025em}
+.mldy-home #arcana p{font-size:16px}
+.mldy-home .homepage-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.mldy-home .homepage-actions .button{margin:0}
+.mldy-home #products .cards{grid-template-columns:repeat(4,minmax(0,1fr))}
+.mldy-home #products .product{min-width:0}
+.mldy-home #products .download-actions{margin-top:auto;display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding-top:12px}
+.mldy-home #products .download-actions .button{padding:10px 12px}
+.mldy-home #products .download-actions .card-learn{margin:0}
+.mldy-home .forge-reminder{margin-block:36px 48px;padding:22px 26px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;border:1px solid #806235;border-radius:14px;background:#17131b}
+.mldy-home .forge-reminder h2,.mldy-home .forge-reminder p,.mldy-home .upcoming-card h3{margin:0}
+.mldy-home .forge-reminder p,.mldy-home .upcoming-card p{color:#aab8ca;margin-top:6px;line-height:1.55}
+.mldy-home .upcoming-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px}
+.mldy-home .upcoming-card{padding:20px;border:1px solid #1a2a3d;border-radius:12px;background:#0b1421}
+.mldy-home .upcoming-card a{color:#70c8ff;text-decoration:underline;text-underline-offset:3px}
+.mldy-home :focus-visible{outline:2px solid #f0cc78;outline-offset:4px}
+@media(max-width:1100px){.mldy-home #products .cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.mldy-home #products .cards{grid-template-columns:1fr!important}.mldy-home #arcana{margin-block:24px 28px}}
